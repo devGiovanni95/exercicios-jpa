@@ -46,7 +46,7 @@ public class DAO<E> {
     }
 
     public DAO<E> incluirAtomico(E entidade){
-        return this.abritTransacao().incluirAtomico(entidade).fecharTransacao();
+        return this.abritTransacao().incluir(entidade).fecharTransacao();
     }
 
     public List<E> obterTodos() {
