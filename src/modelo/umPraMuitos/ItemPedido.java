@@ -20,7 +20,8 @@ public class ItemPedido {
     @ManyToOne
     private Pedido pedido;
 
-    @ManyToOne
+/*Definido por padrao mesmo sem colocar*/
+    @ManyToOne(fetch = FetchType.EAGER)
     private Produto produto;
 
     public ItemPedido(){

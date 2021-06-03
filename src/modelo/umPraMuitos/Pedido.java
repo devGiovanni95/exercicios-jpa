@@ -14,8 +14,12 @@ public class Pedido {
     @Column(nullable = false)
     private Date data;
 
-    /*Criando um ligacao bidirecional*/
-    @OneToMany(mappedBy = "pedido")
+    /*Criando um ligacao bidirecional*//*Por padra ja e trazido esta opcao mesmo nao declarando*/
+
+//    @OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY)
+
+    //usado para trazer de uma unica vez para que, nao de erro se o DAO fechar estiver acima do foreach
+    @OneToMany(mappedBy = "pedido", fetch = FetchType.EAGER)
     private List<ItemPedido> itens;
 
     public Pedido() {
