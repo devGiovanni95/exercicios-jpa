@@ -9,6 +9,8 @@
         <class> modelo.basico.Produto</class>
         <class> modelo.umPraUm.Assento</class>
         <class> modelo.umPraUm.Cliente</class>
+        <class> modelo.umPraMuitos.ItemPedido</class>
+        <class> modelo.umPraMuitos.Pedido</class>
 
 
         <properties>
