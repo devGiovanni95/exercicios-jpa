@@ -11,6 +11,9 @@
         <class> modelo.umPraUm.Cliente</class>
         <class> modelo.umPraMuitos.ItemPedido</class>
         <class> modelo.umPraMuitos.Pedido</class>
+        <class> modelo.muitosPraMuitos.Sobrinho</class>
+        <class> modelo.muitosPraMuitos.Tio</class>
+
 
 
         <properties>

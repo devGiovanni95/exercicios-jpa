@@ -19,7 +19,8 @@ public class Pedido {
 //    @OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY)
 
     //usado para trazer de uma unica vez para que, nao de erro se o DAO fechar estiver acima do foreach
-    @OneToMany(mappedBy = "pedido", fetch = FetchType.EAGER)
+//    @OneToMany(mappedBy = "pedido", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY)
     private List<ItemPedido> itens;
 
     public Pedido() {
