@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+    <named-query name="obterFilmesComNotaMaiorQue">
+        <query>
+            select distinct f from Filme f
+            join fetch f.atores
+            where f.nota > :nota
+        </query>
+    </named-query>
+
+    <named-native-query name="obterMediaGeralDosFilmes"
+                        result-set-mapping="NotaFilmeMap">
+        <query>
+            select avg(nota) as media from filmes
+        </query>
+    </named-native-query>
+
+    <sql-result-set-mapping name="NotaFilmeMap">
+        <constructor-result target-class="modelo.consulta.NotaFilme">
+            <column name="media" class="java.lang.Double "/>
+        </constructor-result>
+    </sql-result-set-mapping>
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>myshortname</short-name>
+    <uri>http://mycompany.com</uri>
+
+
+
+</taglib>
